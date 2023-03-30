@@ -18,7 +18,7 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
-        int arr[] = generateRandomArray();
+        int [] arr = generateRandomArray();
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
@@ -29,13 +29,13 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         int arr[] = generateRandomArray();
-        int minExpenditurePerDay = 0;
-        int maxExpenditurePerDay = 0;
+        int minExpenditurePerDay = arr[0];
+        int maxExpenditurePerDay = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > maxExpenditurePerDay) {
                 maxExpenditurePerDay = arr[i];
             }
-            if (minExpenditurePerDay < arr[i]) {
+            if (arr[i] < minExpenditurePerDay ) {
                 minExpenditurePerDay = arr[i];
             }
         }
